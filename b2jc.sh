@@ -18,3 +18,9 @@ export MOZ_CHROME_MULTILOCALE="ja"
 export PATH="$PATH:$B2G_DIR/gecko-locales/compare-locales/scripts"
 export PYTHONPATH="$B2G_DIR/gecko-locales/compare-locales/lib"
 export GAIA_KEYBOARD_LAYOUTS=en,jp-kanji
+rm -rf $B2G_DIR/gaia-locales/ja
+rm -rf $B2G_DIR/gecko-locales/ja
+rm -rf $B2G_DIR/gecko-locales/compare-locales
+hg clone http://hg.mozilla.org/gaia-l10n/ja $B2G_DIR/gaia-locales/ja
+hg clone http://hg.mozilla.org/l10n-central/ja $B2G_DIR/gecko-locales/ja
+hg clone http://hg.mozilla.org/build/compare-locales $B2G_DIR/gecko-locales/compare-locales
